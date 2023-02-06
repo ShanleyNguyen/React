@@ -1,0 +1,41 @@
+.todo-item {
+  display: block;
+}
+
+.btn-task {
+  background-color: powderblue;
+  margin-top: 0.5rem;
+  width: 100%;
+  text-align: left;
+}
+
+.btn-task-completed {
+  background-color: coral;
+  margin-top: 0.5rem;
+  width: 100%;
+  text-align: left;
+}
+
+.text-completed {
+  text-decoration: line-through;
+}
+
+.text-todo {
+  text-decoration: none;
+}
+
+.checked-icon {
+  float: right;
+  color: green;
+}
+
+.checked-icon:hover {
+  background-color: bisque;
+  border: none 2px;
+  border-radius: 5px;
+}
+
+.delete-icon {
+  float: right;
+  color: red;
+}
