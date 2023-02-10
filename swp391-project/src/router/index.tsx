@@ -1,8 +1,7 @@
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from "../pages/home";
-import DefaultLayout from "../layout/default";
-// import DefaultLayout from "../component/Layout/default";
+import DefaultLayout from "layout/default";
+import HomePage from "pages/home";
 
 const Routing = () => {
   return (
@@ -11,7 +10,7 @@ const Routing = () => {
         <Route path="/" element={<DefaultLayout />}>
           <Route index element={<HomePage />} />
         </Route>
-          <Route path="*" element={<>404 Error</>} />
+        <Route path="*" element={<>404 Error</>} />
       </Routes>
     </Router>
   );

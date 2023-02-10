@@ -1,9 +1,11 @@
 import { Button, Checkbox, Divider } from "antd";
 import React, { useMemo } from "react";
-import InputQuizfer from "../../ui/input";
-import DatePickerQuizfer from "../../ui/date-picker";
-
-const AuthTemplate = ({ type }) => {
+import InputQuizfer from "components/ui/input";
+import DatePickerQuizfer from "components/ui/date-picker";
+interface IAuthTemplateProps {
+  type: string;
+}
+const AuthTemplate: React.FC<IAuthTemplateProps> = ({ type }) => {
   const isSignUp = useMemo(() => type === "signup", [type]);
   return (
     <div className="m-10 text-base">
@@ -16,7 +18,9 @@ const AuthTemplate = ({ type }) => {
           src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"
           alt=""
         />
-        <span className="font-bold text-slate-500">{isSignUp ? "Đăng ký" : "Đăng nhập"} bằng Google</span>
+        <span className="font-bold text-slate-500">
+          {isSignUp ? "Đăng ký" : "Đăng nhập"} bằng Google
+        </span>
       </div>
       <Divider className="py-7">
         <span className="text-slate-500">Hoặc Email</span>
@@ -31,15 +35,16 @@ const AuthTemplate = ({ type }) => {
         </Button>
         <p className=" text-sm italic">
           {isSignUp && <Checkbox className="mr-2" />}
-           {isSignUp ? "Tôi chấp nhận" : "Khi đăng nhập, bạn chấp thuận"}{" "}
-          <span className="text-blue-500">Điều khoản dịch vụ</span> và{" "}
-          <span className="text-blue-500">
+          {isSignUp ? "Tôi chấp nhận" : "Khi đăng nhập, bạn chấp thuận"}{" "}
+          <span className="text-blue">Điều khoản dịch vụ</span> và{" "}
+          <span className="text-blue">
             Chính sách quyền riêng tư của Quizfer
-          </span>.
+          </span>
+          .
         </p>
         <Button
           type="link"
-          className="bg-blue-500 text-white shadow-md mt-5"
+          className="bg-blue text-white shadow-md mt-5"
           size="large"
           block
         >

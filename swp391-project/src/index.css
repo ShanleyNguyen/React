@@ -4,33 +4,39 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-image: linear-gradient(
+    55deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 32, 121, 1) 60%,
+    rgba(0, 212, 255, 1) 92%
+  ) ; */
+  background-repeat: no-repeat;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.ant-btn{
+.ant-btn {
   font-weight: 600;
   border: none;
 }
-.ant-drawer-body{
-  padding: 0 !important
+.ant-drawer-body {
+  padding: 0 !important;
 }
-.ant-input{
+.ant-input {
   min-height: 55px;
 }
-.ant-picker{
+.ant-picker {
   min-height: 55px;
   width: 100%;
 }
-/* .sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-} */
+.ant-card-body{
+  padding: 0 !important;
+  height: 100% !important;
+}

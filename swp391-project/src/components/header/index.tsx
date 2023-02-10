@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import logo from "../../images/logo.png";
-import loginBanner from "../../images/loginBanner.jpg";
 import Search from "antd/es/transfer/search";
 import { Button, Drawer } from "antd";
 import { CloseOutlined } from "@ant-design/icons";
-import AuthTemplate from "../auth/auth-template";
+import AuthTemplate from "components/auth/auth-template";
+const logo = require("images/logo.png");
+const loginBanner = require("images/loginBanner.png");
 
-const Header = (props) => {
+const Header: React.FC<any> = () => {
   const [openAuth, setOpenAuth] = useState(false);
   const [typeAuth, setTypeAuth] = useState("signin");
 
   return (
     <>
-      <div className="min-w-full min-h-[50px] p-3 sticky top-0">
+      <div className="bg-white min-w-full min-h-[50px] p-3 fixed top-0 shadow-md z-50">
         <div className="flex items-center justify-between">
           <img src={logo} width={150} alt="" />
           <div className="flex gap-1">
@@ -33,7 +33,7 @@ const Header = (props) => {
             </Button>
             <Button
               size="large"
-              className="bg-yellow-300"
+              className="bg-yellow"
               onClick={() => {
                 setTypeAuth("signup");
                 setOpenAuth(true);
@@ -52,13 +52,13 @@ const Header = (props) => {
         open={openAuth}
       >
         <div className="flex h-full">
-          <img className="w-1/2  h-full" src={loginBanner} width={400} alt="" />
-          <div className="w-1/2 px-[100px] py-10 overflow-scroll">
-          <img className="mx-auto mb-5" src={logo} width={200} alt="" />
+          <img className="w-1/2" src={loginBanner} alt="" />
+          <div className="w-1/2 px-[100px] py-10 overflow-y-scroll">
+            <img className="mx-auto mb-5" src={logo} width={200} alt="" />
             <div className="flex justify-center gap-5">
               <Button
                 size="large"
-                className={typeAuth === "signin" && "bg-yellow-300"}
+                className={typeAuth === "signin" ? "bg-yellow" : ""}
                 type="link"
                 onClick={() => setTypeAuth("signin")}
               >
@@ -67,7 +67,7 @@ const Header = (props) => {
               <Button
                 size="large"
                 type="link"
-                className={typeAuth === "signup" && "bg-yellow-300"}
+                className={typeAuth === "signup" ? "bg-yellow" : ""}
                 onClick={() => setTypeAuth("signup")}
               >
                 Đăng ký
@@ -76,7 +76,10 @@ const Header = (props) => {
             <AuthTemplate type={typeAuth} />
           </div>
         </div>
-        <CloseOutlined className="absolute top-3 right-5" onClick={() => setOpenAuth(false)} />
+        <CloseOutlined
+          className="absolute top-3 right-5"
+          onClick={() => setOpenAuth(false)}
+        />
       </Drawer>
     </>
   );
