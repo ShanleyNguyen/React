@@ -4,16 +4,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        white:"#fff",
-        blue: "#5892ef",
+        white: "#fff",
+        blue: "#1677ff",
         purple: "#4257b2",
         pink: "#ff49db",
         orange: "#ff7849",
-        green: "#13ce66",
+        "green-dark": "#13ce66",
         yellow: "#f5e459",
-        "gray-dark": "#273444",
+        wheat: "rgba(255,234,193,1)",
+        "gray-dark": "#3e4a5c",
         gray: "#939bb4",
         "gray-light": "#d3dce6",
+      },
+      fontWeight: {
+        bold: "600",
       },
     },
   },

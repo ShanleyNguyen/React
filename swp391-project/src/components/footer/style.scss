@@ -1,0 +1,45 @@
+.footer {
+  background: #333;
+  .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.5rem;
+    .box {
+      padding: 1rem 0;
+      flex: 1 1 25rem;
+      p {
+        font-size: 1rem;
+        padding: 0.7rem 0;
+        color: #eee;
+      }
+      a {
+        display: block;
+        font-size: 1rem;
+        padding: 0.7rem 0;
+        color: #eee;
+        &:hover {
+          color: orange;
+          text-decoration: underline;
+        }
+      }
+      h3 {
+        font-size: 1.5rem;
+        padding: 0.7rem 0;
+        color: #fff;
+      }
+    }
+  }
+  .credit {
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #fff;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+    span {
+      color: orange;
+    }
+  }
+}

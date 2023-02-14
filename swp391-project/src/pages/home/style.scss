@@ -1,0 +1,49 @@
+.heading {
+  text-align: center;
+  padding: 2rem 0;
+  span {
+    font-size: 2rem;
+    background: rgba(255, 165, 0, 0.2);
+    color: var(--orange);
+    border-radius: 0.5rem;
+    padding: 0.2rem 1rem;
+    .space {
+      background: none;
+    }
+  }
+}
+
+.services {
+  .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    .box {
+      border-bottom: rgba(238, 162, 20, 0.493) 1.5px solid;
+      box-shadow: rgba(238, 162, 20, 0.493) transparent;
+      flex: 1 1 30rem;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      text-align: center;
+      &:hover {
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+      }
+      i {
+        padding: 1rem;
+        font-size: 3rem;
+        color: var(--orange);
+      }
+      h3 {
+        font-size: 2.5rem;
+        font-family: monospace;
+        color: #333;
+      }
+      p {
+        font-size: 1rem;
+        font-family: monospace;
+        color: #666;
+        padding: 1rem 0;
+      }
+    }
+  }
+}

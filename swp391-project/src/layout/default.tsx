@@ -5,9 +5,9 @@ import Footer from "components/footer";
 
 function DefaultLayout() {
   return (
-    <div>
+    <div className="text-gray-dark">
       <Header />
-      <div className="container pt-[100px] mx-auto">
+      <div className="container py-[100px] mx-auto">
         <Outlet />
       </div>
       <Footer />
